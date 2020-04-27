@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="618.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.AccountManagement.OpenSalesAccountController">
+    <children>
+        <Pane layoutY="1.0" prefHeight="761.0" prefWidth="858.0">
+            <children>
+                <GridPane layoutX="644.0" layoutY="721.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="146.0" text="확인" GridPane.columnIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Button>
+                    </children>
+                </GridPane>
+                <GridPane layoutX="6.0" layoutY="23.0" prefHeight="467.0" prefWidth="333.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="101.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="232.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="상호명" />
+                        <Label text="대표자명" GridPane.rowIndex="3" />
+                        <Label text="주소" GridPane.rowIndex="4" />
+                        <Label text="전화번호" GridPane.rowIndex="5" />
+                        <Label text="입점날짜" GridPane.rowIndex="6" />
+                        <TextField fx:id="name_tf" editable="false" prefHeight="25.0" prefWidth="387.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="representative_tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="address_tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="ph_tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="담당사원" GridPane.rowIndex="10" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                     <children>
+                        <TextField fx:id="companyType_tf" editable="false">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="secondCompanyType_tf" editable="false">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" text="업장분류" GridPane.rowIndex="11" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <children>
+                        <TextField fx:id="employee_tf" editable="false" prefHeight="25.0" prefWidth="93.0" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="36.0" text="지역">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="area_tf" editable="false" prefHeight="25.0" prefWidth="92.0" />
+                     </children>
+                  </HBox>
+                  <Label text="과세 거래처" GridPane.rowIndex="12" />
+                  <TextField fx:id="taxaccount_tf" editable="false" prefWidth="232.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                  <TextField fx:id="entryDate_tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="입금 구분" GridPane.rowIndex="7" />
+                  <Label text="세금 계산서 구분" GridPane.rowIndex="8" />
+                  <Label text="회사 구분" GridPane.rowIndex="9" />
+                  <TextField fx:id="deposit_tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="taxBill_tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <TextField fx:id="company_tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <Label text="입점 상태" GridPane.rowIndex="1" />
+                  <TextField fx:id="using_tf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="철수 날짜" GridPane.rowIndex="2" />
+                  <TextField fx:id="withdrawalDate_tf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    </children>
+                </GridPane>
+            <TableView fx:id="machine_tableView" layoutX="15.0" layoutY="529.0" prefHeight="180.0" prefWidth="828.0">
+              <columns>
+                <TableColumn fx:id="ma_c1" prefWidth="92.0" style="-fx-alignment: center;" text="기계명" />
+                <TableColumn fx:id="ma_c2" prefWidth="73.0" style="-fx-alignment: center;" text="기계 대수" />
+                  <TableColumn fx:id="ma_c3" prefWidth="82.0" style="-fx-alignment: center;" text="초기 수량" />
+                  <TableColumn fx:id="ma_c4" prefWidth="79.0" style="-fx-alignment: center;" text="수수료" />
+                  <TableColumn fx:id="ma_c5" prefWidth="75.0" text="+500" />
+                  <TableColumn fx:id="ma_c6" prefWidth="75.0" text="-500" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <GridPane layoutX="351.0" layoutY="14.0" prefHeight="505.0" prefWidth="490.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="372.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="563.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="설치 기계 변경사항" GridPane.rowIndex="4" />
+                  <TableView fx:id="modifyCount_tableView" prefHeight="174.0" prefWidth="490.0" GridPane.rowIndex="5">
+                    <columns>
+                      <TableColumn fx:id="mc_c1" prefWidth="90.0" style="-fx-alignment: center;" text="날짜" />
+                        <TableColumn fx:id="mc_c2" prefWidth="100.0" style="-fx-alignment: center;" text="변경 타입" />
+                      <TableColumn fx:id="mc_c3" prefWidth="298.0" text="변경 내용" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="modifyFees_tableView" prefHeight="200.0" prefWidth="340.0" GridPane.rowIndex="3">
+                    <columns>
+                      <TableColumn fx:id="mf_c1" prefWidth="90.0" style="-fx-alignment: center;" text="날짜" />
+                      <TableColumn fx:id="mf_c2" prefWidth="100.0" style="-fx-alignment: center;" text="변경 타입" />
+                        <TableColumn fx:id="mf_c3" prefWidth="298.0" text="변경 내용" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="modifyInitialQuantity_tableView" prefHeight="200.0" prefWidth="340.0" GridPane.rowIndex="1">
+                    <columns>
+                      <TableColumn fx:id="mq_c1" prefWidth="90.0" style="-fx-alignment: center;" text="날짜" />
+                      <TableColumn fx:id="mq_c2" prefWidth="100.0" style="-fx-alignment: center;" text="변경 타입" />
+                        <TableColumn fx:id="mq_c3" prefWidth="298.0" text="변경 내용" />
+                    </columns>
+                  </TableView>
+                  <Label text="초기 수량 변경 사항" />
+                  <Label text="수수료 변경 사항" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

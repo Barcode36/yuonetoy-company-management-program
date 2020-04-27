@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane prefHeight="512.0" prefWidth="1157.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.SalesManagement.MonthSalesLookUpController">
+    <children>
+        <Pane prefHeight="512.0" prefWidth="1157.0">
+            <children>
+                <TableView fx:id="sales_tableView" layoutX="13.0" layoutY="46.0" prefHeight="453.0" prefWidth="1132.0">
+                    <columns>
+                  <TableColumn fx:id="m18" prefWidth="75.0" text="입점 상태" />
+                        <TableColumn fx:id="m1" minWidth="0.0" text="지역 구분" />
+                        <TableColumn fx:id="m2" minWidth="0.0" prefWidth="81.0" text="업장 구분" />
+                        <TableColumn fx:id="m3" minWidth="0.0" prefWidth="81.0" text="소분류" />
+                        <TableColumn fx:id="m17" prefWidth="75.0" text="담당자" />
+                        <TableColumn fx:id="m4" prefWidth="218.0" text="매출 거래처" />
+                        <TableColumn fx:id="m5" prefWidth="100.0" text="1월" />
+                        <TableColumn fx:id="m6" prefWidth="100.0" text="2월" />
+                        <TableColumn fx:id="m7" prefWidth="100.0" text="3월" />
+                        <TableColumn fx:id="m8" prefWidth="100.0" text="4월" />
+                        <TableColumn fx:id="m9" prefWidth="100.0" text="5월" />
+                        <TableColumn fx:id="m10" prefWidth="100.0" text="6월" />
+                        <TableColumn fx:id="m11" prefWidth="100.0" text="7월" />
+                        <TableColumn fx:id="m12" prefWidth="100.0" text="8월" />
+                        <TableColumn fx:id="m13" prefWidth="100.0" text="9월" />
+                        <TableColumn fx:id="m14" prefWidth="100.0" text="10월" />
+                        <TableColumn fx:id="m15" prefWidth="100.0" text="11월" />
+                        <TableColumn fx:id="m16" prefWidth="100.0" text="12월" />
+                  <TableColumn fx:id="m19" prefWidth="90.0" text="철수 날짜" />
+                    </columns>
+                </TableView>
+                <CheckComboBox fx:id="area_cb" layoutX="13.0" layoutY="14.0" prefHeight="25.0" prefWidth="81.0" />
+                <CheckComboBox fx:id="companyType_cb" layoutX="94.0" layoutY="14.0" prefHeight="25.0" prefWidth="81.0" />
+                <CheckComboBox fx:id="secondCompanyType_cb" layoutX="175.0" layoutY="14.0" prefHeight="25.0" prefWidth="81.0" />
+                <ComboBox fx:id="salesAccount_cb" editable="true" layoutX="331.0" layoutY="14.0" prefHeight="25.0" prefWidth="218.0" />
+                <CheckComboBox fx:id="employee_cb" layoutX="256.0" layoutY="14.0" prefHeight="25.0" prefWidth="75.0" />
+                <DatePicker fx:id="last_dp" layoutX="703.0" layoutY="14.0" prefHeight="25.0" prefWidth="110.0" />
+                <DatePicker fx:id="start_dp" layoutX="570.0" layoutY="14.0" prefHeight="25.0" prefWidth="110.0" />
+            <Label layoutX="687.0" layoutY="18.0" text="~" />
+            <Button layoutX="824.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleLookupBtnClick" prefHeight="25.0" prefWidth="100.0" text="조회" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

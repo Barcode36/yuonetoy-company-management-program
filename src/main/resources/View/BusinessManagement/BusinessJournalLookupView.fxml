@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="962.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.BusinessManagement.BusinessJournalLookupController">
+    <Pane layoutX="4.0" layoutY="48.0" prefHeight="522.0" prefWidth="955.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="48.0">
+        <children>
+            <TableView fx:id="tableView1" layoutX="14.0" prefHeight="258.0" prefWidth="927.0">
+                <columns>
+                    <TableColumn fx:id="mc1" prefWidth="84.0" text="분류" />
+                    <TableColumn fx:id="mc2" prefWidth="75.0" text="담당자" />
+                    <TableColumn fx:id="mc3" prefWidth="323.0" text="거래처 명" />
+                    <TableColumn fx:id="mc4" prefWidth="107.0" text="날짜" />
+                </columns>
+            </TableView>
+            <TableView fx:id="tableView2" editable="true" layoutX="14.0" layoutY="299.0" prefHeight="213.0" prefWidth="927.0">
+                <columns>
+               <TableColumn fx:id="m11" editable="false" prefWidth="75.0" text="구분" />
+                      <TableColumn fx:id="m1" editable="false" prefWidth="120.0" text="기계명" />
+                    <TableColumn fx:id="machine_tc" prefWidth="410.0" text="기계 정보">
+                        <columns>
+                            <TableColumn fx:id="m2" prefWidth="100.0" text="기계 대수" />
+                            <TableColumn fx:id="m3" prefWidth="100.0" text="초기 수량" />
+                            <TableColumn fx:id="m4" prefWidth="100.0" text="수수료" />
+                        </columns>
+                    </TableColumn>
+                    <TableColumn fx:id="employee_tc" prefWidth="260.0" text="재고 정보">
+                        <columns>
+                            <TableColumn fx:id="m5" editable="false" prefWidth="130.0" text="상품명" />
+                            <TableColumn fx:id="m6" prefWidth="100.0" text="보충 수량" />
+                            <TableColumn fx:id="m7" prefWidth="100.0" text="+500 보충 수량" />
+                            <TableColumn fx:id="m8" prefWidth="100.0" text="-500 보충 수량" />
+
+                              </columns>
+                    </TableColumn>
+                    <TableColumn fx:id="sales_tc" prefWidth="242.0" text="매출 정보">
+                        <columns>
+                            <TableColumn fx:id="m9" prefWidth="100.0" text="총 수금액" />
+                            <TableColumn fx:id="m10" prefWidth="100.0" text="환불금" />
+                        </columns>
+                    </TableColumn>
+                </columns>
+            </TableView>
+         <Button layoutX="14.0" layoutY="266.0" mnemonicParsing="false" onAction="#updateBusinessJournal" prefHeight="25.0" prefWidth="139.0" text="수정" />
+         <Button layoutX="164.0" layoutY="266.0" mnemonicParsing="false" onAction="#deleteBusinessJournal" prefHeight="25.0" prefWidth="139.0" text="삭제" />
+        </children>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+    </Pane>
+   <HBox layoutX="18.0" layoutY="12.0" prefHeight="25.0" prefWidth="802.0">
+      <children>
+         <DatePicker fx:id="firstDate_dp" prefHeight="25.0">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </DatePicker>
+         <DatePicker fx:id="lastDate_dp" prefHeight="25.0">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </DatePicker>
+         <ComboBox fx:id="salesAccount_cb" editable="true" prefHeight="25.0" prefWidth="245.0">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </ComboBox>
+         <Button mnemonicParsing="false" onAction="#callBusinessJournalHistory" prefHeight="25.0" prefWidth="113.0" text="조회" />
+      </children>
+   </HBox>
+</AnchorPane>

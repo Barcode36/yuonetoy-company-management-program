@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="529.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.AccountManagement.AddSalesAccountController">
+    <children>
+        <Pane layoutY="1.0" prefHeight="488.0" prefWidth="360.0">
+            <children>
+                <GridPane layoutX="7.0" layoutY="14.0" prefHeight="466.0" prefWidth="333.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="101.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="232.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="상호명" />
+                        <Label text="대표자명" GridPane.rowIndex="1" />
+                        <Label text="주소" GridPane.rowIndex="2" />
+                        <Label text="전화번호" GridPane.rowIndex="3" />
+                        <Label text="입점날짜" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" text="업장분류" GridPane.rowIndex="9" />
+                  <Label text="담당사원" GridPane.rowIndex="8" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="147.0" text="과세 거래처 확인" GridPane.rowIndex="12" />
+                  <Label text="과세 거래처" GridPane.rowIndex="10" />
+                        <TextField fx:id="name_tf" prefHeight="25.0" prefWidth="387.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="representative_tf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="address_tf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="ph_tf" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="entryDate_dp" editable="false" prefHeight="21.0" prefWidth="344.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <children>
+                        <ChoiceBox fx:id="employee_cb" prefHeight="25.0" prefWidth="111.0" />
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="32.0" text="지역">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="area_cb" prefHeight="25.0" prefWidth="72.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <children>
+                        <ChoiceBox fx:id="companyType_cb" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></ChoiceBox>
+                        <ChoiceBox fx:id="secondCompanyType_cb" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></ChoiceBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <children>
+                        <TextField fx:id="taxAccount_tf" prefHeight="25.0" prefWidth="172.0">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="search_btn" mnemonicParsing="false" onAction="#handleSearchTaxAccount" prefHeight="25.0" prefWidth="55.0" text="검색">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <ListView fx:id="taxAccount_listView" prefHeight="71.0" prefWidth="232.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </GridPane.margin></ListView>
+                  <Label text="입금 구분" GridPane.rowIndex="5" />
+                  <Label text="세금 계산서 구분" GridPane.rowIndex="6" />
+                  <Label text="회사 구분" GridPane.rowIndex="7" />
+                  <ChoiceBox fx:id="deposit_cb" prefHeight="25.0" prefWidth="434.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ChoiceBox fx:id="taxBill_cb" prefHeight="25.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <RadioButton fx:id="yuonetoy_rb" mnemonicParsing="false" selected="true" text="유원토이">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="yuonetng_rb" mnemonicParsing="false" text="유원티엔지">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="checkTaxaccount_tf" editable="false" promptText="과세 거래처를 선택 해주세요" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                    </children>
+                </GridPane>
+            </children>
+        </Pane>
+      <GridPane layoutX="360.0" layoutY="14.0" prefHeight="161.0" prefWidth="448.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="155.0" minWidth="0.0" prefWidth="67.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="414.0" minWidth="10.0" prefWidth="347.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="설치 기계" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <ChoiceBox fx:id="machine_cb" prefHeight="25.0" prefWidth="265.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <TextField fx:id="count_tf" prefHeight="25.0" prefWidth="99.0" promptText="대수">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="32.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <TextField fx:id="productCount_tf" prefHeight="25.0" prefWidth="167.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" text="수수료" />
+                  <TextField fx:id="fees_tf" prefHeight="25.0" prefWidth="158.0" />
+               </children>
+            </HBox>
+            <Label text="세팅 수량" GridPane.rowIndex="2" />
+            <Label text="상품 선택" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="product_cb" prefHeight="25.0" prefWidth="425.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="plus_btn" mnemonicParsing="false" onAction="#handlePlusBtnClick" prefHeight="25.0" prefWidth="90.0" text="기계 추가">
+                     <HBox.margin>
+                        <Insets left="10.0" right="2.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="minus_btn" mnemonicParsing="false" onAction="#handleMinusBtnClick" prefHeight="25.0" prefWidth="90.0" text="기계 삭제">
+                     <HBox.margin>
+                        <Insets left="2.5" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <TableView fx:id="machine_tableView" editable="true" layoutX="360.0" layoutY="149.0" prefHeight="331.0" prefWidth="448.0">
+        <columns>
+          <TableColumn fx:id="ma_c1" editable="false" prefWidth="92.0" style="-fx-alignment: center;" text="기계명" />
+          <TableColumn fx:id="ma_c2" prefWidth="73.0" style="-fx-alignment: center;" text="기계 대수" />
+            <TableColumn fx:id="ma_c3" prefWidth="79.0" style="-fx-alignment: center;" text="수수료" />
+            <TableColumn fx:id="ma_c4" prefWidth="75.0" text="초기 수량" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+          <GridPane layoutX="608.0" layoutY="489.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                  <Button fx:id="add_btn" mnemonicParsing="false" onAction="#handleAdd" prefHeight="40.0" prefWidth="100.0" text="추가">
+                      <GridPane.margin>
+                          <Insets left="10.0" />
+                      </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="40.0" prefWidth="100.0" text="취소" GridPane.columnIndex="1">
+                      <GridPane.margin>
+                          <Insets left="10.0" />
+                      </GridPane.margin>
+                  </Button>
+              </children>
+          </GridPane>
+      <Button layoutX="14.0" layoutY="489.0" mnemonicParsing="false" onAction="#handleAddBtnClick" prefHeight="33.0" prefWidth="326.0" text="과세 거래처 추가" />
+    </children>
+</AnchorPane>

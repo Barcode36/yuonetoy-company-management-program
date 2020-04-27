@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="664.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.MainController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="27.0" prefWidth="869.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar layoutY="29.0" prefHeight="42.0" prefWidth="869.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+            <MenuButton fx:id="business_management_btn" contentDisplay="TOP" mnemonicParsing="false" prefHeight="65.0" prefWidth="112.0" text="영업 일지 관리">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleBusinessJournalEditBtn" text="영업 일지 작성" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleBusinessLookupBtn" text="영업 일지 조회" />
+              </items>
+            </MenuButton>
+            <Button fx:id="stock_management_btn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleStockBtnClick" prefHeight="65.0" prefWidth="95.0" text="재고 관리" textAlignment="CENTER" />
+            <Button fx:id="sales_management_btn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleSalesManagementBtnClick" prefHeight="65.0" prefWidth="95.0" text="매출 관리" textAlignment="CENTER" />
+            <Button fx:id="deposit_management_btn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleDepositManagementBtn" prefHeight="65.0" prefWidth="95.0" text="입금 관리" textAlignment="CENTER" />
+          <Button fx:id="account_management_btn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleAccountBtnClick" prefHeight="65.0" prefWidth="95.0" text="거래처 관리" textAlignment="CENTER" />
+            <Button fx:id="employee_management_btn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleEmployeeBtnClick" prefHeight="65.0" prefWidth="95.0" text="사원 관리" textAlignment="CENTER" />
+            <Button fx:id="product_management_btn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleProductBtnClick" prefHeight="65.0" prefWidth="95.0" text="상품 관리" textAlignment="CENTER" />
+            <Button fx:id="company_management_btn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleCompanyBtnClick" prefHeight="65.0" prefWidth="95.0" text="지사 관리" textAlignment="CENTER" />
+            <Button fx:id="etc_management_btn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleEtcBtnClick" prefHeight="65.0" prefWidth="95.0" text="기타 관리" textAlignment="CENTER" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

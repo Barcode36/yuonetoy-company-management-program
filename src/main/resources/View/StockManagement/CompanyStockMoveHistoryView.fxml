@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="524.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.StockManagement.CompanyStockMoveHistoryController">
+    <children>
+
+        <TableView fx:id="history_tableview" layoutX="215.0" layoutY="10.0" prefHeight="501.0" prefWidth="877.0">
+            <columns>
+            <TableColumn fx:id="m1" prefWidth="100.0" text="구분" />
+                <TableColumn fx:id="m2" prefWidth="150.0" text="지점명" />
+                <TableColumn fx:id="m3" minWidth="0.0" prefWidth="150.0" text="지점 및 사원" />
+                <TableColumn fx:id="m4" prefWidth="135.0" text="재고명" />
+                <TableColumn fx:id="m5" prefWidth="120.0" text="보낸 수량" />
+            <TableColumn fx:id="m6" prefWidth="120.0" text="재고 수량" />
+                <TableColumn fx:id="m7" prefWidth="100.0" text="날짜" />
+            </columns>
+        </TableView>
+      <VBox alignment="CENTER" layoutX="9.0" layoutY="12.0" prefHeight="501.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#callCompanyStockHistory" prefHeight="25.0" prefWidth="189.0" text="조회">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+              <DatePicker fx:id="firstDate_dp" prefHeight="25.0" prefWidth="189.0" promptText="시작 날짜">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </DatePicker>
+            <DatePicker fx:id="lastDate_dp" prefHeight="25.0" prefWidth="189.0" promptText="마지막 날짜">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </DatePicker>
+            <ComboBox fx:id="company_cb" prefHeight="25.0" prefWidth="189.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <TextField fx:id="search_tf" maxWidth="189.0" prefHeight="22.0" prefWidth="189.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <ListView fx:id="companyStock_lv" prefHeight="392.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+    </children>
+
+</AnchorPane>

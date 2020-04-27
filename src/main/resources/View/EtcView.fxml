@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="468.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.EtcManagement.EtcController">
+   <children>
+      <GridPane layoutX="29.0" layoutY="244.0" prefHeight="211.0" prefWidth="310.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="56.0" minHeight="2.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="매출 거래처 업장 및 요소 관리" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="companyType_tf" prefHeight="25.0" prefWidth="150.0" promptText="분류명을 입력하세요">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="secondCompanyType_tf" prefHeight="25.0" prefWidth="150.0" promptText="소분류명을 입력하세요">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="116.0" prefWidth="371.0" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="companyType_listView" prefHeight="116.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ListView>
+                  <ListView fx:id="secondCompanyType_listView" prefHeight="200.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ListView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="businessAdd_btn" mnemonicParsing="false" onAction="#addCompanyType" prefHeight="25.0" prefWidth="100.0" text="추가">
+                     <HBox.margin>
+                        <Insets right="2.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="businessDel_btn" mnemonicParsing="false" onAction="#delCompanyType" prefWidth="100.0" text="삭제">
+                     <HBox.margin>
+                        <Insets left="2.5" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="smallBusinessAdd_btn" mnemonicParsing="false" onAction="#addSecondCompanyType" prefHeight="25.0" prefWidth="100.0" text="추가">
+                     <HBox.margin>
+                        <Insets left="5.0" right="2.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="smallBusinessDel_btn" mnemonicParsing="false" onAction="#delSecondCompanyType" prefWidth="100.0" text="삭제">
+                     <HBox.margin>
+                        <Insets left="2.5" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <GridPane layoutX="29.0" layoutY="24.0" prefHeight="211.0" prefWidth="150.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="56.0" minHeight="2.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="employeeArea_tf" prefHeight="25.0" prefWidth="150.0" promptText="지역명을 입력하세요">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="116.0" prefWidth="163.0" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="employeeAreas_listView" prefHeight="116.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ListView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="employeeAreaAdd_btn" mnemonicParsing="false" onAction="#addEmployeeArea" prefHeight="25.0" prefWidth="100.0" text="추가">
+                     <HBox.margin>
+                        <Insets right="2.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="employeeAreaDel_btn" mnemonicParsing="false" onAction="#delEmployeeArea" prefWidth="100.0" text="삭제">
+                     <HBox.margin>
+                        <Insets left="2.5" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="영업사원 지역 관리" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="189.0" layoutY="24.0" prefHeight="211.0" prefWidth="150.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="56.0" minHeight="2.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="salesArea_tf" prefHeight="25.0" prefWidth="150.0" promptText="지역명을 입력하세요">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="116.0" prefWidth="163.0" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="salesAreas_listView" prefHeight="116.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ListView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="salesAreaAdd_btn" mnemonicParsing="false" onAction="#addSalesArea" prefHeight="25.0" prefWidth="100.0" text="추가">
+                     <HBox.margin>
+                        <Insets right="2.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="salesAreaDel_btn" mnemonicParsing="false" onAction="#delSalesAccountArea" prefWidth="100.0" text="삭제">
+                     <HBox.margin>
+                        <Insets left="2.5" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="매출 거래처 지역 관리" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="357.0" layoutY="27.0" prefHeight="422.0" prefWidth="432.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="56.0" minHeight="2.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="347.0" minHeight="10.0" prefHeight="337.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox prefHeight="318.0" prefWidth="195.0" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="machines_tableView" prefHeight="309.0" prefWidth="484.0">
+                    <columns>
+                      <TableColumn fx:id="c1" prefWidth="100.0" text="기계 타입" />
+                      <TableColumn fx:id="c2" prefWidth="180.0" text="기계명" />
+                        <TableColumn fx:id="c3" minWidth="0.0" prefWidth="150.0" text="연결 상품" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="195.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="machineAdd_btn" mnemonicParsing="false" onAction="#addMachine" prefHeight="25.0" prefWidth="100.0" text="추가">
+                     <HBox.margin>
+                        <Insets right="2.5" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="machineDel_btn" mnemonicParsing="false" onAction="#delMachine" prefHeight="25.0" prefWidth="100.0" text="삭제">
+                     <HBox.margin>
+                        <Insets left="2.5" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label text="기계 관리" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <ComboBox fx:id="machineType_cb" prefHeight="25.0" prefWidth="349.0" promptText="기계 품목을 선택 하세요">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="machine_tf" prefHeight="25.0" prefWidth="362.0" promptText="기계명을 입력하세요" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <ListView fx:id="product_lv" disable="true" layoutX="799.0" layoutY="82.0" prefHeight="302.0" prefWidth="200.0" />
+      <TextField fx:id="productSearch_tf" disable="true" layoutX="799.0" layoutY="51.0" prefHeight="22.0" prefWidth="200.0" promptText="검색할 상품명을 입력하세요" />
+      <TextField fx:id="product_tf" layoutX="799.0" layoutY="392.0" prefHeight="25.0" prefWidth="200.0" promptText="상품을 선택해주세요" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="786.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.AccountManagement.AccountController">
+    <children>
+        <TabPane fx:id="tabPane" layoutY="44.0" prefHeight="747.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="44.0">
+            <tabs>
+                <Tab fx:id="sales_tab" text="매출 거래처">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="760.0" prefWidth="960.0">
+                            <children>
+                                <Pane prefHeight="408.0" prefWidth="957.0">
+                                    <children>
+                                        <TableView fx:id="sales_tableView" editable="true" layoutX="14.0" layoutY="39.0" prefHeight="355.0" prefWidth="932.0">
+                                            <columns>
+                                    <TableColumn fx:id="sa_c10" maxWidth="-1.0" minWidth="65.0" prefWidth="-1.0" text="입점상태" />
+                                                <TableColumn fx:id="sa_c2" prefWidth="70.0" resizable="false" style="-fx-alignment: center;" text="지역구분" />
+                                                <TableColumn fx:id="sa_c3" prefWidth="70.0" resizable="false" style="-fx-alignment: center;" text="업장분류" />
+                                                <TableColumn fx:id="sa_c4" prefWidth="70.0" resizable="false" style="-fx-alignment: center;" text="소분류" />
+                                                <TableColumn fx:id="sa_c5" prefWidth="225.0" resizable="false" text="상호명" />
+                                                <TableColumn fx:id="sa_c6" minWidth="0.0" prefWidth="150.0" resizable="false" text="주소" />
+                                                <TableColumn fx:id="sa_c7" minWidth="0.0" prefWidth="100.0" resizable="false" style="-fx-alignment: center;" text="전화번호" />
+                                                <TableColumn fx:id="sa_c8" minWidth="0.0" prefWidth="90.0" resizable="false" style="-fx-alignment: center;" text="입점일자" />
+                                                <TableColumn fx:id="sa_c9" prefWidth="90.0" resizable="false" style="-fx-alignment: center;" text="담당자" />
+
+                                            </columns>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                        <CheckComboBox fx:id="area_cb" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="70.0" />
+                                        <CheckComboBox fx:id="companyTypes_cb" layoutX="84.0" layoutY="14.0" prefHeight="25.0" prefWidth="70.0" />
+                                        <CheckComboBox fx:id="secondCompanyTypes_cb" layoutX="154.0" layoutY="14.0" prefHeight="25.0" prefWidth="70.0" />
+                                        <CheckComboBox fx:id="employee_cb" layoutX="861.0" layoutY="14.0" prefHeight="25.0" prefWidth="85.0" />
+                                        <ComboBox fx:id="salesAccountName_cb" editable="true" layoutX="224.0" layoutY="14.0" prefHeight="25.0" prefWidth="260.0" />
+                                    </children>
+                                </Pane>
+                                <TitledPane fx:id="titledPane" animated="false" layoutX="-2.0" layoutY="405.0" prefHeight="310.0" prefWidth="963.0" text="총 거래처 및 기계 현황 " AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="405.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="960.0">
+                                            <children>
+                                                <GridPane layoutX="14.0" layoutY="59.0" prefHeight="217.0" prefWidth="930.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="458.0" minWidth="10.0" prefWidth="396.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="603.0" minWidth="10.0" prefWidth="534.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="181.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="420.0" minHeight="10.0" prefHeight="197.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <TableView fx:id="machine_tableView" prefHeight="214.0" prefWidth="435.0" GridPane.rowIndex="1">
+                                                            <columns>
+                                                                <TableColumn fx:id="mc_c1" prefWidth="132.0" style="-fx-alignment: center;" text="이름" />
+                                                                <TableColumn fx:id="mc_c2" style="-fx-alignment: center-right;" text="선택된 거래처 기계 수" />
+                                                                <TableColumn fx:id="mc_c3" style="-fx-alignment: center-right;" text="총 설치된 기계 수" />
+                                                            </columns>
+                                                            <columnResizePolicy>
+                                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                            </columnResizePolicy>
+                                                        </TableView>
+                                                        <Label text="설치 기계 현황" />
+                                                        <Label text="동전 교환기 설치 현황" GridPane.columnIndex="1">
+                                                            <GridPane.margin>
+                                                                <Insets left="15.0" />
+                                                            </GridPane.margin>
+                                                        </Label>
+                                                        <TableView fx:id="coinChanger_tableView" prefHeight="270.0" prefWidth="433.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                            <columns>
+                                                                <TableColumn fx:id="cc_c1" prefWidth="75.0" style="-fx-alignment: center;" text="이름" />
+                                                                <TableColumn fx:id="cc_c2" prefWidth="75.0" style="-fx-alignment: center-right;" text="수량" />
+                                                                <TableColumn fx:id="cc_c3" prefWidth="75.0" style="-fx-alignment: center-right;" text="시재금" />
+                                                                <TableColumn fx:id="cc_c4" prefWidth="75.0" style="-fx-alignment: center-right;" text="총 수량" />
+                                                                <TableColumn fx:id="cc_c5" prefWidth="75.0" style="-fx-alignment: center-right;" text="총 시재금" />
+                                                            </columns>
+                                                            <columnResizePolicy>
+                                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                            </columnResizePolicy>
+                                                            <GridPane.margin>
+                                                                <Insets left="15.0" />
+                                                            </GridPane.margin>
+                                                        </TableView>
+                                                    </children>
+                                                </GridPane>
+                                                <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="453.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="83.0" text="총 거래처 수 :  " textAlignment="CENTER" />
+                                                        <Label fx:id="numsOfallAccount_lb" prefHeight="17.0" prefWidth="100.0" text="0개" />
+                                                        <Label alignment="CENTER" prefWidth="100.0" text="현재 거래처 수 : " textAlignment="CENTER">
+                                                            <HBox.margin>
+                                                                <Insets left="20.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <Label fx:id="numsOfAccount_lb" prefWidth="100.0" text="0개" textFill="RED" />
+                                                    </children>
+                                                </HBox>
+                                                <Label fx:id="sorted_lb" layoutX="14.0" layoutY="11.0" prefHeight="20.0" prefWidth="797.0" text="[ 지역구분 : 전체 ]     [ 업장구분 : 전체 ]     [ 소분류 : 전체 ]     [ 상호명 : 전체 ]     [ 담당자 : 전체 ]" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="purchase_tab" text="매입 거래처">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="purchase_tableView" editable="true" layoutX="11.0" layoutY="38.0" prefHeight="381.0" prefWidth="932.0">
+                                    <columns>
+                                        <TableColumn fx:id="pa_c2" prefWidth="335.0" resizable="false" text="상호명" />
+                                        <TableColumn fx:id="pa_c3" prefWidth="290.0" resizable="false" text="주소" />
+                                        <TableColumn fx:id="pa_c4" minWidth="0.0" prefWidth="178.0" resizable="false" style="-fx-alignment: center;" text="전화번호" />
+                                        <TableColumn fx:id="pa_c5" minWidth="0.0" prefWidth="127.0" resizable="false" style="-fx-alignment: center;" text="입점일자" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                                <TextField fx:id="purchaseName_tf" layoutX="11.0" layoutY="14.0" prefHeight="25.0" prefWidth="336.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tax_tab" text="과세 거래처">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tax_tableView" layoutX="11.0" layoutY="38.0" prefHeight="381.0" prefWidth="932.0">
+                                    <columns>
+                                        <TableColumn fx:id="ta_c2" prefWidth="335.0" resizable="false" text="상호명" />
+                                        <TableColumn fx:id="ta_c3" prefWidth="290.0" resizable="false" text="주소" />
+                                        <TableColumn fx:id="ta_c4" minWidth="0.0" prefWidth="178.0" resizable="false" style="-fx-alignment: center;" text="전화번호" />
+                                        <TableColumn fx:id="ta_c5" minWidth="0.0" prefWidth="127.0" resizable="false" style="-fx-alignment: center;" text="입점일자" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                                <TextField fx:id="taxName_tf" layoutX="11.0" layoutY="14.0" prefHeight="25.0" prefWidth="336.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0">
+            <items>
+                <Button fx:id="add_btn" mnemonicParsing="false" onAction="#handleAddBtnClick" prefHeight="35.0" prefWidth="100.0" text="추가" />
+                <Button fx:id="modify_btn" mnemonicParsing="false" onAction="#handleModifyBtnClick" prefHeight="35.0" prefWidth="100.0" text="수정" />
+                <Button fx:id="del_btn" mnemonicParsing="false" onAction="#handleDeleteBtnClick" prefHeight="35.0" prefWidth="100.0" text="삭제" />
+                <Button fx:id="open_btn" mnemonicParsing="false" onAction="#handleOpenBtnClick" prefHeight="35.0" prefWidth="100.0" text="조회" />
+            </items>
+        </ToolBar>
+    </children>
+</AnchorPane>

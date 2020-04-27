@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="791.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.StockManagement.SendStockHistoryController">
+    <children>
+
+        <TableView fx:id="history_tableview" editable="true" layoutX="14.0" layoutY="85.0" prefHeight="692.0" prefWidth="877.0">
+            <columns>
+            <TableColumn fx:id="m1" prefWidth="100.0" text="분류" />
+                <TableColumn fx:id="m2" prefWidth="150.0" text="출발지" />
+                <TableColumn fx:id="m3" minWidth="0.0" prefWidth="150.0" text="도착지" />
+                <TableColumn fx:id="m4" prefWidth="135.0" text="재고명" />
+                <TableColumn fx:id="m5" prefWidth="120.0" text="보낸 수량" />
+                <TableColumn fx:id="m6" prefWidth="100.0" text="날짜" />
+            </columns>
+        </TableView>
+        <DatePicker fx:id="lastDate_dp" layoutX="194.0" layoutY="14.0" prefHeight="25.0" prefWidth="171.0" />
+        <DatePicker fx:id="firstDate_dp" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="171.0" />
+        <ComboBox fx:id="type_cb" layoutX="14.0" layoutY="49.0" prefHeight="25.0" prefWidth="100.0" />
+      <ComboBox fx:id="source_cb" editable="true" layoutX="114.0" layoutY="49.0" prefHeight="25.0" prefWidth="150.0" />
+      <ComboBox fx:id="target_cb" editable="true" layoutX="264.0" layoutY="49.0" prefHeight="25.0" prefWidth="150.0" />
+      <ComboBox fx:id="stock_cb" editable="true" layoutX="414.0" layoutY="49.0" prefHeight="25.0" prefWidth="136.0" />
+      <Button layoutX="373.0" layoutY="14.0" mnemonicParsing="false" onAction="#callHistory" prefHeight="25.0" prefWidth="82.0" text="조회" />
+      <Button layoutX="468.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteSendStockHistory" prefHeight="25.0" prefWidth="82.0" text="삭제" />
+    </children>
+
+</AnchorPane>

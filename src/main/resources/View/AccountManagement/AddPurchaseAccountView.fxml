@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="275.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuonetoy.Controller.AccountManagement.AddPurchaseAccountController">
+   <children>
+      <Pane layoutY="2.0" prefHeight="273.0" prefWidth="362.0">
+         <children>
+            <GridPane layoutX="147.0" layoutY="228.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="add_btn" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="130.0" text="추가">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="cancle_btn" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="146.0" text="취소" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <GridPane layoutX="14.0" layoutY="14.0" prefHeight="168.0" prefWidth="333.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="101.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="232.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="상호명" />
+                  <Label prefHeight="17.0" prefWidth="97.0" text="사업자 등록 번호" GridPane.rowIndex="1" />
+                  <Label text="대표자명" GridPane.rowIndex="2" />
+                  <Label text="주소" GridPane.rowIndex="3" />
+                  <Label text="전화번호" GridPane.rowIndex="4" />
+                  <Label text="입점날짜" GridPane.rowIndex="5" />
+                  <TextField fx:id="name_tf" prefHeight="25.0" prefWidth="387.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="companyNum_tf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="representative_tf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="address_tf" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="ph_tf" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <DatePicker fx:id="entryDate_dp" prefHeight="21.0" prefWidth="344.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="14.0" layoutY="189.0" prefHeight="30.0" prefWidth="333.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="53.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="113.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="124.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="40.0" text="업태" />
+                  <TextField fx:id="uptea_tf" prefHeight="25.0" prefWidth="113.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="jongmok_tf" prefHeight="25.0" prefWidth="113.0" GridPane.columnIndex="3" />
+                  <Label alignment="CENTER" prefWidth="40.0" text="종목" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
